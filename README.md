@@ -3,7 +3,9 @@
 > Memorable developer positioning.
 
 ## Header
-
+<p align="center">
+  <img src="./portrait.svg" width="600">
+</p>
 Hi, I'm **tuffgit21**. This README shares what I'm building, the tools I use, and the work I'm proud of.
 
 <p align="center">
