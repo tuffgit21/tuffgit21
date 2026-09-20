@@ -1,0 +1,72 @@
+:root{
+    --ink:#c9d1d9;
+    --muted:#9aa3b2;
+    --line:rgba(255,255,255,.14);
+    --card:rgba(22,27,34,.72);
+    --accent:#f8e390;
+    --font:"Comfortaa",sans-serif;
+}
+*{box-sizing:border-box}
+html{
+    scroll-behavior:smooth;
+    /* background AS pfp: GitHub avatar, fallback to portrait.svg if offline */
+    background:
+        url("https://github.com/tuffgit21.png") center top / cover no-repeat fixed,
+        url("./portrait.svg") center top / cover no-repeat fixed,
+        #0b0e14;
+    color:var(--ink);
+    font-family:var(--font);
+    line-height:1.65;
+    min-height:100%;
+}
+body{
+    margin:0;
+    /* dark veil over pfp for readability — blurless */
+    background: rgba(11,14,20,.82);
+    min-height:100vh;
+}
+a{color:#fff; text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--accent)}
+a:hover{color:var(--accent)}
+img{max-width:100%; height:auto; display:block}
+.page{max-width:680px; margin:0 auto; padding:2rem 1.25rem 3rem; text-align:center}
+
+.profile-hero{padding:1.5rem 0 1rem}
+.avatar{
+    width:148px; height:148px; border-radius:50%; object-fit:cover;
+    border:4px solid rgba(255,255,255,.92); outline:2px solid var(--line);
+    box-shadow:0 14px 36px rgba(0,0,0,.55);
+    margin:0 auto; display:block; background:#111722;
+}
+.profile-hero h1{font-size:2.1rem; margin:.9rem 0 .15rem; letter-spacing:.02em; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.handle{margin:0; color:var(--muted); font-size:.9rem}
+.tagline{margin:.5rem 0 0; font-weight:700; color:var(--accent)}
+.lead{color:var(--muted); max-width:48ch; margin:.6rem auto 0; font-size:.95rem}
+.cta-row{margin-top:1rem; font-size:.85rem; color:var(--muted)}
+.cta-row .dot{margin:0 .4rem}
+.cta-row a{color:var(--muted)}
+.cta-row a:hover{color:#fff}
+
+.art{margin:1.5rem 0; border:1px solid var(--line); border-radius:12px; background:var(--card); padding:.6rem; text-align:left}
+.art summary{cursor:pointer; font-size:.85rem; color:var(--muted)}
+.art img{border-radius:8px; margin-top:.6rem; border:1px solid var(--line)}
+
+.block{border-top:1px solid var(--line); padding:1.4rem 0 0; margin:1.4rem 0; text-align:left}
+.block h2{font-size:1.05rem; margin:0 0 .5rem; color:#fff}
+.facts{margin:.4rem 0 0 1.1rem; padding:0; color:var(--muted)}
+.facts li{margin:.2rem 0}
+.facts strong{color:var(--ink)}
+.pills{display:flex; flex-wrap:wrap; gap:.4rem; margin:.5rem 0 0}
+.pills span{font-size:.8rem; border:1px solid var(--line); padding:.25rem .6rem; border-radius:999px; background:var(--card); color:var(--ink)}
+.proj-list{list-style:none; margin:.5rem 0 0; padding:0}
+.proj-list li{border-left:3px solid var(--accent); padding:.4rem 0 .4rem .7rem; margin:.7rem 0; background:var(--card); border-radius:0 8px 8px 0}
+.proj-list li span{color:var(--muted); font-size:.9rem}
+.social-row{display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin:.7rem 0 0}
+.social-row a{border:1px solid var(--line); padding:.35rem .7rem; border-radius:999px; background:var(--card); color:var(--ink); text-decoration:none; font-size:.85rem; font-weight:600}
+.social-row a:hover{background:rgba(255,255,255,.12); color:#fff}
+
+.foot{border-top:1px solid var(--line); margin-top:2rem; padding-top:1rem; text-align:center; font-size:.8rem; color:var(--muted)}
+code{background:var(--card); border:1px solid var(--line); padding:.1rem .3rem; border-radius:6px; font-size:.8em; color:var(--accent)}
+@media (max-width:600px){
+    .avatar{width:116px; height:116px}
+    .profile-hero h1{font-size:1.6rem}
+}
