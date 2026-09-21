@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b0e14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="tuffgit21">
+    <link rel="icon" type="image/svg+xml" href="wordmark.svg">
+    <link rel="apple-touch-icon" href="portrait.svg">
 </head>
 <body>
     <main class="page">
@@ -76,5 +83,12 @@
             <p>© 2026 tuffgit21 · <a href="https://github.com/tuffgit21/tuffgit21">repo</a> · <a href="https://tuffgit21.github.io/">ledger →</a></p>
         </footer>
     </main>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', {scope: './'}).catch(e => console.warn('SW failed', e));
+      });
+    }
+    </script>
 </body>
 </html>
