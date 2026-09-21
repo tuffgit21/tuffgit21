@@ -1,5 +1,5 @@
 /* tuffgit21 profile — Service Worker for PWA install on Android */
-const CACHE_VERSION = 'tuffgit21-profile-v1';
+const CACHE_VERSION = 'tuffgit21-profile-v2';
 const CORE_CACHE = CACHE_VERSION + '-core';
 const RUNTIME_CACHE = CACHE_VERSION + '-runtime';
 
@@ -9,7 +9,9 @@ const CORE_ASSETS = [
   './styles.css',
   './manifest.json',
   './wordmark.svg',
-  './portrait.svg'
+  './portrait.svg',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
